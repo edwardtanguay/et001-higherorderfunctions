@@ -15,16 +15,14 @@ const getCountry = (countryName) => {
 
 // create function to send a letter and get an array of objects with countries that start with that letter
 const getCountriesWithLetter = (letter) => {
-	return ['c1', 'c2'];
-};
+	return countries.filter(m => m.country[0].toLowerCase() === letter.toLowerCase());
+}
 
 // const country = getCountry('Schweiz');
 // console.log(country);
 
-const letterCountries = getCountriesWithLetter('b');
+const letterCountries = getCountriesWithLetter('s');
 console.log(letterCountries);
-
-
 
 // DATA
 function getCountryObj() {
