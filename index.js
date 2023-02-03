@@ -58,6 +58,22 @@ const employees = getEmployees();
 // console.log(numberFromUsa);
 
 // get total number of reports created by employees
+// const totalCreatedReports = employees.reduce((total,emp) => {
+// 	return total + emp.reportsCreated;
+// }, 0);
+// console.log(totalCreatedReports);
+
+// create a last-name banner for the company party
+// e.g. "Fuller Buchanan Davolio ..."
+// const banner = employees.reduce((banner, emp) => {
+// 	return banner + ' ' + emp.lastName;
+// }, '').trim();
+// console.log(banner);
+
+// create a last-name banner for the company party
+const banner = employees.map(m => m.lastName).join(' - ');
+console.log(banner);
+
 
 function getEmployees() {
 	return [
