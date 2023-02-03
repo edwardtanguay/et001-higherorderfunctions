@@ -1,6 +1,20 @@
 const countryObj = getCountryObj();
 
-console.log(countryObj);
+// create an array of country objects from countryObj
+const countries = Object.entries(countryObj).map(keyValue => {
+	return {
+		"country": keyValue[0],
+		"capital": keyValue[1],
+	}
+});
+
+// create function to find specific country item
+const getCountry = (countryName) => {
+	return countries.find(m => m.country === countryName);	
+};
+
+const country = getCountry('Schweiz');
+console.log(country);
 
 
 
