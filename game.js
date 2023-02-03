@@ -18,9 +18,6 @@ const getCountriesWithLetter = (letter) => {
 	return countries.filter(m => m.country[0].toLowerCase() === letter.toLowerCase());
 }
 
-// const country = getCountry('Schweiz');
-// console.log(country);
-
 const letterCountries = getCountriesWithLetter('s');
 console.log(letterCountries);
 
