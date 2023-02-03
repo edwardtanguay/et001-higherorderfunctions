@@ -44,6 +44,20 @@ const employees = getEmployees();
 // const fullNames = employees.filter(m => m.address.country === 'USA').map(m => `${m.firstName} ${m.lastName} (${m.address.city}, ${m.address.country})`);
 // console.log(fullNames);
 
+// get employee with ID 3
+// const employee = employees.find(m => m.employeeID === 3);
+// console.log(employee);
+
+// change last name of employee ID 3
+// const employee = employees.find(m => m.employeeID === 3);
+// employee.lastName = "Newname";
+// console.log(employee);
+
+// get number of employees from USA
+// const numberFromUsa = employees.filter(m => m.address.country === 'USA').length;
+// console.log(numberFromUsa);
+
+// get total number of reports created by employees
 
 function getEmployees() {
 	return [
@@ -65,7 +79,8 @@ function getEmployees() {
 			},
 			notes: 'Andrew received his BTS commercial in 1974 and a Ph.D. in international marketing from the University of Dallas in 1981.  He is fluent in French and Italian and reads German.  He joined the company as a sales representative was promoted to sales manager',
 			reportsTo: 'NULL',
-			territoryIDs: [1730, 1833, 2116, 2139, 2184, 40222, 1581]
+			territoryIDs: [1730, 1833, 2116, 2139, 2184, 40222, 1581],
+			reportsCreated: 34
 		},
 		{
 			employeeID: 5,
@@ -85,7 +100,8 @@ function getEmployees() {
 			},
 			notes: 'Steven Buchanan graduated from St. Andrews University in Scotland with a BSC degree in 1976.  Upon joining the company as a sales representative in 1992 he spent 6 months in an orientation program at the Seattle office.',
 			reportsTo: 2,
-			territoryIDs: [2903, 7960, 8837, 10019, 10038, 11747, 14450]
+			territoryIDs: [2903, 7960, 8837, 10019, 10038, 11747, 14450],
+			reportsCreated:21 
 		},
 		{
 			employeeID: 1,
@@ -105,7 +121,8 @@ function getEmployees() {
 			},
 			notes: 'Education includes a BA in psychology from Colorado State University in 1970.  She also completed The Art of the Cold Call.  Nancy is a member of Toastmasters International.',
 			reportsTo: 2,
-			territoryIDs: [6897, 19713]
+			territoryIDs: [6897, 19713],
+			reportsCreated: 55 
 		},
 		{
 			employeeID: 3,
@@ -125,7 +142,8 @@ function getEmployees() {
 			},
 			notes: 'Janet has a BS degree in chemistry from Boston College (1984). She has also completed a certificate program in food retailing management.  Janet was hired as a sales associate in 1991 and promoted to sales representative in February 1992.',
 			reportsTo: 2,
-			territoryIDs: [30346, 31406, 32859, 33607]
+			territoryIDs: [30346, 31406, 32859, 33607],
+			reportsCreated:11 
 		},
 		{
 			employeeID: 4,
@@ -145,7 +163,8 @@ function getEmployees() {
 			},
 			notes: 'Margaret holds a BA in English literature from Concordia College (1958) and an MA from the American Institute of Culinary Arts (1966).  She was assigned to the London office temporarily from July through November 1992.',
 			reportsTo: 2,
-			territoryIDs: [20852, 27403, 27511]
+			territoryIDs: [20852, 27403, 27511],
+			reportsCreated:21
 		},
 		{
 			employeeID: 6,
@@ -165,7 +184,8 @@ function getEmployees() {
 			},
 			notes: 'Michael is a graduate of Sussex University (MA Economics 1983) and the University of California at Los Angeles (MBA marketing 1986).  He has also taken the courses Multi-Cultural Selling and Time Management for the Sales Professional.',
 			reportsTo: 5,
-			territoryIDs: [85014, 85251, 98004, 98104, 98052]
+			territoryIDs: [85014, 85251, 98004, 98104, 98052],
+			reportsCreated:3
 		},
 		{
 			employeeID: 7,
@@ -188,7 +208,8 @@ function getEmployees() {
 			territoryIDs: [
 				60601, 80202, 80909, 90405, 94025, 94105, 95008, 95054, 95060,
 				60179
-			]
+			],
+			reportsCreated:71 
 		},
 		{
 			employeeID: 8,
@@ -208,7 +229,8 @@ function getEmployees() {
 			},
 			notes: 'Laura received a BA in psychology from the University of Washington.  She has also completed a course in business French.  She reads and writes French.',
 			reportsTo: 2,
-			territoryIDs: [19428, 44122, 45839, 53404]
+			territoryIDs: [19428, 44122, 45839, 53404],
+			reportsCreated:81
 		},
 		{
 			employeeID: 9,
@@ -228,7 +250,8 @@ function getEmployees() {
 			},
 			notes: 'Anne has a BA degree in English from St. Lawrence College.  She is fluent in French and German.',
 			reportsTo: 5,
-			territoryIDs: [3049, 3801, 48075, 48084, 48304, 55113, 55439]
+			territoryIDs: [3049, 3801, 48075, 48084, 48304, 55113, 55439],
+			reportsCreated:19
 		}
 	];
 }
