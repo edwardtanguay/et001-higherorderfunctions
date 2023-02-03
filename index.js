@@ -1,3 +1,5 @@
+import fs from 'fs';
+
 const employees = getEmployees();
 
 // get number of employees
@@ -71,9 +73,57 @@ const employees = getEmployees();
 // console.log(banner);
 
 // create a last-name banner for the company party
-const banner = employees.map(m => m.lastName).join(' - ');
-console.log(banner);
+// const banner = employees.map(m => m.lastName).join(' - ');
+// console.log(banner);
 
+// create HTML page with name cutouts, and save in file
+// const html = employees.reduce((html, emp) => {
+// 	return html + `
+// <h1>${emp.firstName} ${emp.lastName}</h1>
+// <p>${emp.notes}</p>
+// `;
+// }, '');
+// fs.writeFileSync('nametags.html', html);
+
+// create an object out of the employee array
+/*
+{
+	"employeeID_2": {
+		"firstName": "John",
+		"lastName": "Doe",
+		"country": "USA",
+	},
+	"employeeID_3": {
+		...
+	},
+	"employeeID_4": {
+		...
+	},
+	...
+}
+*/
+const employeeObj = employees.reduce((obj, emp) => {
+	obj[`employeeID_${emp.employeeID}`] = {
+		"firstName": emp.firstName,
+		"lastName": emp.lastName,
+		"country": emp.address.country
+	}
+	return obj;
+}, {});
+console.log(employeeObj);
+
+
+// create a team object for a printer service
+/*
+{
+	"teamName": "Company XYZ GmbH",
+	"members": [
+		{ "firstName": "fff", "lastName": "xyz", country: "nnn" },
+		{ "firstName": "fff", "lastName": "xyz", country: "nnn" },
+		{ "firstName": "fff", "lastName": "xyz", country: "nnn" }
+	]
+}
+*/
 
 function getEmployees() {
 	return [
