@@ -102,15 +102,15 @@ const employees = getEmployees();
 	...
 }
 */
-const employeeObj = employees.reduce((obj, emp) => {
-	obj[`employeeID_${emp.employeeID}`] = {
-		"firstName": emp.firstName,
-		"lastName": emp.lastName,
-		"country": emp.address.country
-	}
-	return obj;
-}, {});
-console.log(employeeObj);
+// const employeeObj = employees.reduce((obj, emp) => {
+// 	obj[`employeeID_${emp.employeeID}`] = {
+// 		"firstName": emp.firstName,
+// 		"lastName": emp.lastName,
+// 		"country": emp.address.country
+// 	}
+// 	return obj;
+// }, {});
+// console.log(employeeObj);
 
 
 // create a team object for a printer service
