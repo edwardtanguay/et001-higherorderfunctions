@@ -13,8 +13,16 @@ const getCountry = (countryName) => {
 	return countries.find(m => m.country === countryName);	
 };
 
-const country = getCountry('Schweiz');
-console.log(country);
+// create function to send a letter and get an array of objects with countries that start with that letter
+const getCountriesWithLetter = (letter) => {
+	return ['c1', 'c2'];
+};
+
+// const country = getCountry('Schweiz');
+// console.log(country);
+
+const letterCountries = getCountriesWithLetter('b');
+console.log(letterCountries);
 
 
 
