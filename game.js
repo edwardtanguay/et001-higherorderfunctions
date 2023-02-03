@@ -18,8 +18,15 @@ const getCountriesWithLetter = (letter) => {
 	return countries.filter(m => m.country[0].toLowerCase() === letter.toLowerCase());
 }
 
+// same function with startsWith
+const getCountriesWithLetter2 = (letter) => {
+	return countries.filter(m => m.country[0].toLowerCase().startsWith(letter.toLowerCase()));
+}
+
 const letterCountries = getCountriesWithLetter('s');
 console.log(letterCountries);
+const letterCountries2 = getCountriesWithLetter2('t');
+console.log(letterCountries2);
 
 // DATA
 function getCountryObj() {
