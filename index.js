@@ -1,7 +1,17 @@
 const employees = getEmployees();
 
 // get number of employees
-console.log(employees.length);
+// console.log(employees.length);
+
+// display all first names (one-liner)
+// employees.forEach(m => console.log(m.firstName));
+
+// display all first names (multi-liner)
+// employees.forEach(emp => {
+// 	console.log(emp.firstName);
+// });
+
+
 
 
 function getEmployees() {
